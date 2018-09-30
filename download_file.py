@@ -6,7 +6,7 @@ import re
 import math
 
 def get_size(url):
-    cmd = "curl -sI \"" + url + "\" | grep Content-Length: | grep -E -o \"[0-9]+\"" # About to execute this #
+    cmd = "curl -sI \"" + url + "\" | grep -i Content-Length: | grep -E -o \"[0-9]+\"" # About to execute this #
     # print("About to Execute:\n",cmd,"....")
     (status,output) = subprocess.getstatusoutput(cmd)
     if status:
