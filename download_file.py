@@ -22,6 +22,7 @@ def get_size(url):
 def download_file(url,filename,part_size=300000000):
     max_part_size = part_size
     file_size = int(get_size(url))
+    print("File Size: %d" % (file_size/1e6))
     num_parts = math.ceil(file_size/max_part_size)
 
     for x in range(0,num_parts):
